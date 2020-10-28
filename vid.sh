@@ -24,7 +24,7 @@ fi
 [ "$1" = "--nomouse" ] && DRAW_MOUSE="-draw_mouse 0"
 [ "$2" = "--nomouse" ] && DRAW_MOUSE="-draw_mouse 0"
 
-echo "press q to stop"
+trap 'cp -f "$file" "$vid_dir/current.mp4"' INT
 ffmpeg -y \
     -hide_banner \
     $DRAW_MOUSE \
