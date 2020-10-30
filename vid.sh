@@ -10,7 +10,7 @@ file=$vid_dir/$date/$date-$time.mp4
 
 mkdir -p "$vid_dir/$date"
 
-if [ "$1" = "--win" ]
+if [ "$1" = "--win" ] || [ "$2" = "--win" ]
 then
 	eval $(xdotool selectwindow getwindowgeometry --shell)
 else
